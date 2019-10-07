@@ -11,6 +11,9 @@ import com.kotlin.graphql.FindRepoQuery
 import kotlinx.android.synthetic.main.repo_layout.*
 import okhttp3.OkHttpClient
 import java.util.logging.Logger
+import okhttp3.logging.HttpLoggingInterceptor
+
+
 
 /**
  * This activity will list the information about searched repo from github.
@@ -39,8 +42,8 @@ class SearchRepoActivity : AppCompatActivity() {
             client.query(
                 FindRepoQuery
                     .builder()
-                    .name(repo_name_edittext.text.toString())
-                    .owner(owner_name_edittext.text.toString())
+                    .name("butterknife")
+                    .owner("jakewharton")
                     .build()
             )
                 .enqueue(object : ApolloCall.Callback<FindRepoQuery.Data>() {
@@ -77,14 +80,17 @@ class SearchRepoActivity : AppCompatActivity() {
     }
 
     private fun setUpApolloClient(): ApolloClient {
+        val logging = HttpLoggingInterceptor()
+        logging.level = HttpLoggingInterceptor.Level.BODY
         val okHttp = OkHttpClient
             .Builder()
+            .addInterceptor(logging)
             .addInterceptor { chain ->
                 val original = chain.request()
                 val builder = original.newBuilder().method(original.method(), original.body())
                 builder.addHeader(
                     "Authorization",
-                    "Bearer f473255773cc8b16f370702df5289d4f1ff77125"
+                    "Bearer 78fcad15100f24d42449098b50251510f3b66998"
                 )
                 chain.proceed(builder.build())
             }
