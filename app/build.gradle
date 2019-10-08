@@ -9,7 +9,7 @@ apply plugin: 'com.apollographql.android'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.vishal.weather.kotlin"
+        applicationId "com.vishal.github.graphql"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1

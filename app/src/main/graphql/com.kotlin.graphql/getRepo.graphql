@@ -3,6 +3,5 @@ query FindRepoQuery($owner:String!,$name:String!){
     name
     description
     forkCount
-    url
   }
 }

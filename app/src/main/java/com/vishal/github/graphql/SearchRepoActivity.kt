@@ -1,4 +1,4 @@
-package com.vishal.weather.kotlin
+package com.vishal.github.graphql
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -42,8 +42,8 @@ class SearchRepoActivity : AppCompatActivity() {
             client.query(
                 FindRepoQuery
                     .builder()
-                    .name("butterknife")
-                    .owner("jakewharton")
+                    .name(repo_name_edittext.text.toString())
+                    .owner(owner_name_edittext.text.toString())
                     .build()
             )
                 .enqueue(object : ApolloCall.Callback<FindRepoQuery.Data>() {
@@ -67,10 +67,10 @@ class SearchRepoActivity : AppCompatActivity() {
                                 getString(R.string.fork_count_text),
                                 response.data()?.repository()?.forkCount().toString()
                             )
-                            url_text_view.text = String.format(
-                                getString(R.string.url_count_text),
-                                response.data()?.repository()?.url().toString()
-                            )
+//                            url_text_view.text = String.format(
+//                                getString(R.string.url_count_text),
+//                                response.data()?.repository()?.url().toString()
+//                            )
                         }
                     }
 
@@ -90,7 +90,7 @@ class SearchRepoActivity : AppCompatActivity() {
                 val builder = original.newBuilder().method(original.method(), original.body())
                 builder.addHeader(
                     "Authorization",
-                    "Bearer 78fcad15100f24d42449098b50251510f3b66998"
+                    "Bearer 45061ae3abd816c9acd33d960c8e459f0bd01df6"
                 )
                 chain.proceed(builder.build())
             }
