@@ -5,3 +5,4 @@ This app shows the information about searched github repo.
 
 Sample Screenshots
 ------------------
+[https://github.com/viskpy/android-kotlin-graphql/blob/master/ezgif-3-73464eec1ab0.gif]
