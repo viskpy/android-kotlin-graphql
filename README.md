@@ -5,4 +5,4 @@ This app shows the information about searched github repo.
 
 Sample Workflow
 ------------------
-![Loader Screen](https://user-images.githubusercontent.com/56244590/66596209-1b8a3e80-ebba-11e9-9d0c-37e8414462ff.gif)
+![Loader Screen](https://user-images.githubusercontent.com/56244590/66596745-0c57c080-ebbb-11e9-8574-f59eca54e812.gif)
