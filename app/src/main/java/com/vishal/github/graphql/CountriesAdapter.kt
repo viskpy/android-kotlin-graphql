@@ -10,7 +10,7 @@ import com.kotlin.graphql.FindContriesOfAContinentQuery
 /**
  * Adapter class for showing list of countries of a selected continent.
  *
- * @author Vishal - 10th Oct 2019
+ * @author Vishal - 10th Oct 2  019
  * @since 1.0.0
  */
 class CountriesAdapter constructor(countriesData: FindContriesOfAContinentQuery.Data?) :
