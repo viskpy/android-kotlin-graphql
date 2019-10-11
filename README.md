@@ -1,7 +1,11 @@
 # Github Repo Info (Android) 
 This repository is written in Kotlin and uses the graphql of github repo [link](https://countries.trevorblades.com/).
 
-This app shows the information about searched github repo.
+This app list all the countries of selected continent.
+
+# Note: 
+Before cloning this repo make sure you have node installed. 
+Download from [here](https://nodejs.org/en/download/).
 
 Sample Workflow
 ------------------
