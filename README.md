@@ -1,5 +1,5 @@
 # Github Repo Info (Android) 
-This repository is written in Kotlin and uses the graphql of github repo [link](https://countries.trevorblades.com/).
+This repository is written in Kotlin and consumes the graphql api of trevorblades [link](https://countries.trevorblades.com/).
 
 This app list all the countries of selected continent.
 
